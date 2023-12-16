@@ -6,7 +6,10 @@ if (GetLocalStore(key) == null) {
     team_1 = prompt("Enter Team 1 Name ");
     team_2 = prompt("Enter Team 2 Name ");
 }
-
+else {
+    team_1 = GetLocalStore(key)[0].name;
+    team_2 = GetLocalStore(key)[1].name;
+}
 document.getElementById('team-1').innerText = team_1
 document.getElementById('team-2').innerText = team_2
 function add(num, id) {
