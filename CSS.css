@@ -154,3 +154,11 @@ tbody{
     font-size: larger;
     font-weight: bold;
 }
+footer{
+    background: black;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+}

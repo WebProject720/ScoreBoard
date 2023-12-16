@@ -6,6 +6,8 @@ if (GetLocalStore(key) == null) {
     team_1 = prompt("Enter Team 1 Name ");
     if (team_1 != null) {
         team_2 = prompt("Enter Team 2 Name ");
+    }else{
+        team_1="TEAM A";
     }
 }
 else {
