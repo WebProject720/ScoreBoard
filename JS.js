@@ -1,7 +1,14 @@
 //
 const key = "ScoreBoard720";
-const team_1 = "TEAM A";
-const team_2 = "TEAM B";
+let team_1 = "TEAM A";
+let team_2 = "TEAM B";
+if (GetLocalStore(key) == null) {
+    team_1 = prompt("Enter Team 1 Name ");
+    team_2 = prompt("Enter Team 2 Name ");
+}
+
+document.getElementById('team-1').innerText = team_1
+document.getElementById('team-2').innerText = team_2
 function add(num, id) {
     let number = Number(document.getElementById(id).innerText);
     if (number + num >= 0) {
@@ -15,12 +22,18 @@ function add(num, id) {
     }
     let data1 = [], data2 = [];
     if (id == 'score-1') {
-        data1 = (GetLocalStore(key)[0].data)
+        GetLocalStore(key)[0].data.forEach(e => {
+            data1.push(e);
+        })
         data1.push(obj);
+        console.log(data1);
         ScoreCard(GetLocalStore(key)[0].data, 'scoreCard-1')
     } else if (id == 'score-2') {
-        data2 = (GetLocalStore(key)[1].data)
+        GetLocalStore(key)[1].data.forEach(e => {
+            data2.push(e);
+        })
         data2.push(obj);
+        console.log(data2)
         ScoreCard(GetLocalStore(key)[1].data, 'scoreCard-2')
     }
     let ScoreBoard = [{
@@ -67,17 +80,30 @@ function removeData() {
 }
 function ScoreCard(array, id) {
     array.forEach(element => {
-        let tr = document.createElement('tr');
-        let td = document.createElement('td');
-        let center = document.createElement('center');
-        center.innerText = `+${element.score}`;
-        td.appendChild(center);
-        let td2 = document.createElement('td');
-        let center2 = document.createElement('center');
-        center2.innerText = `${element.hh}:${element.mm}`
-        td2.appendChild(center2);
-        tr.appendChild(td)
-        tr.appendChild(td2);
-        document.getElementById(id).appendChild(tr);
+        // let tr = document.createElement('tr');
+        // let td = document.createElement('td');
+        // let center = document.createElement('center');
+        // center.innerText = `+${element.score}`;
+        // td.appendChild(center);
+        // let td2 = document.createElement('td');
+        // let center2 = document.createElement('center');
+        // center2.innerText = `${element.hh}:${element.mm}`
+        // td2.appendChild(center2);
+        // tr.appendChild(td)
+        // tr.appendChild(td2);
+        // document.getElementById(id).appendChild(tr);
+        document.getElementById(id).innerHTML = `<tr>
+            <td>
+                <center>
+                    ${element.score}
+                </center>
+            </td>
+            <td>
+                <center>
+                    ${element.hh}:${element.mm}
+                </center>
+            </td>
+        </tr>`;
+
     });
 }
