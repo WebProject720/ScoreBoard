@@ -94,8 +94,7 @@ function ScoreCard(array, id) {
         if (element.hh == 0) {
             element.hh = 12;
         }
-        if (element.score != -1) {
-            document.getElementById(id).innerHTML += `<tr>
+        document.getElementById(id).innerHTML += `<tr>
             <td>
             <center>
             ${element.score}
@@ -107,6 +106,5 @@ function ScoreCard(array, id) {
             </center>
             </td>
             </tr>`;
-        }
     });
 }
