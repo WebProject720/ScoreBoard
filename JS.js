@@ -88,8 +88,10 @@ function removeData() {
 function ScoreCard(array, id) {
     document.getElementById(id).innerHTML = null;
     array.forEach(element => {
-        element.hh=element.hh%12;
-        element.hh=element.hh?element.hh:12;
+        element.hh = element.hh % 12;
+        if (element.hh == 0) {
+            element.hh = 12;
+        }
         document.getElementById(id).innerHTML += `<tr>
             <td>
                 <center>
