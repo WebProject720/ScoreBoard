@@ -4,7 +4,9 @@ let team_1 = "TEAM A";
 let team_2 = "TEAM B";
 if (GetLocalStore(key) == null) {
     team_1 = prompt("Enter Team 1 Name ");
-    team_2 = prompt("Enter Team 2 Name ");
+    if (team_1 != null) {
+        team_2 = prompt("Enter Team 2 Name ");
+    }
 }
 else {
     team_1 = GetLocalStore(key)[0].name;
