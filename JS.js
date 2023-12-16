@@ -94,17 +94,19 @@ function ScoreCard(array, id) {
         if (element.hh == 0) {
             element.hh = 12;
         }
-        document.getElementById(id).innerHTML += `<tr>
+        if (element.score != -1) {
+            document.getElementById(id).innerHTML += `<tr>
             <td>
-                <center>
-                    ${element.score}
-                </center>
+            <center>
+            ${element.score}
+            </center>
             </td>
             <td>
-                <center>
-                    ${element.hh}:${element.mm}
-                </center>
+            <center>
+            ${element.hh}:${element.mm}
+            </center>
             </td>
-        </tr>`;
+            </tr>`;
+        }
     });
 }
