@@ -21,7 +21,7 @@ This is a simple static website that serves as a basketball scoreboard for two t
 
 ## Demo
 
-You can see a live demo of the scoreboard [here](https://your-username.github.io/basketball-scoreboard/).
+You can see a live demo of the scoreboard [here](https://webproject720.github.io/ScoreBoard).
 
 ## Deploying to GitHub Pages
 
