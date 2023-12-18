@@ -12,7 +12,7 @@ This is a simple static website that serves as a basketball scoreboard for two t
 1. Clone this repository to your local machine:
 
     ```bash
-    git clone https://github.com/your-username/basketball-scoreboard.git
+    git clone https://github.com/WebProject720/ScoreBoard.git
     ```
 
 2. Open the `index.html` file in a web browser.
@@ -32,7 +32,7 @@ To deploy this scoreboard on GitHub Pages:
 2. Push your code to the GitHub repository:
 
     ```bash
-    git remote add origin https://github.com/your-username/your-repository.git
+    git remote add origin https://github.com/WebProject/ScoreBoard.git
     git push -u origin main
     ```
 
@@ -42,7 +42,7 @@ To deploy this scoreboard on GitHub Pages:
 
 5. Choose the `main` branch as the source.
 
-6. Your site will be published at `https://your-username.github.io/your-repository/`.
+6. Your site will be published at `https://WebProject720.github.io/ScoreBoard/`.
 
 ## Customize
 
